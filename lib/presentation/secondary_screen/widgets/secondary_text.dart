@@ -38,7 +38,8 @@ class CustomNormalText extends StatelessWidget {
 
 class CustomTitle extends StatelessWidget {
   final String text;
-  const CustomTitle({super.key, required this.text});
+  final Color? txtColor;
+  const CustomTitle({super.key, required this.text, this.txtColor});
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +48,7 @@ class CustomTitle extends StatelessWidget {
       style: TextStyle(
         fontSize: 16,
         fontWeight: FontWeight.w500,
+        color: txtColor,
       ),
     );
   }

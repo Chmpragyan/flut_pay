@@ -3,3 +3,9 @@ final List<String> activityText = [
   "My Card",
   "Budget",
 ];
+
+final List<String> platinumText = [
+  "Lock Card",
+  "Change Pin",
+  "Statement",
+];

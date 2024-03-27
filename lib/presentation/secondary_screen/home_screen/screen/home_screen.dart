@@ -147,7 +147,6 @@ class HomeScreen extends StatelessWidget {
                 ),
                 itemBuilder: ((context, index) {
                   return Card(
-                    // margin: EdgeInsets.only(left: 5.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
