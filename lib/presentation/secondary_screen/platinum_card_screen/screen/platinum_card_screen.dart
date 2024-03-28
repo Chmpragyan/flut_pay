@@ -53,7 +53,8 @@ class PlatinumCardScreen extends StatelessWidget {
                 right: 10,
               ),
               height: 150,
-              // width: double.maxFinite,
+              width: double.maxFinite,
+              // color: Colors.red,
               child: GridView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: activityIcons.length,

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomTextButtom extends StatelessWidget {
   final String textBtn;
-  const CustomTextButtom({super.key, required this.textBtn});
+  final Color? btnClr;
+  const CustomTextButtom({super.key, required this.textBtn, this.btnClr});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CustomTextButtom extends StatelessWidget {
         style: TextStyle(
           fontSize: 15,
           fontWeight: FontWeight.w500,
-          color: Colors.deepPurple,
+          color: btnClr,
         ),
       ),
     );

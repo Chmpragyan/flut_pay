@@ -30,6 +30,7 @@ class CustomNormalText extends StatelessWidget {
       style: TextStyle(
         fontSize: 14,
         color: txtColor,
+        overflow: TextOverflow.clip,
       ),
       overflow: TextOverflow.clip,
     );
