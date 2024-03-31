@@ -1,4 +1,4 @@
-import 'package:flut_pay/presentation/secondary_screen/calender_screen/screen/calender_screen.dart';
+import 'package:flut_pay/presentation/primary_screen/login_screen/body.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CalenderScreen(),
+      // home: CalenderScreen(),
+      home: LoginScreen(),
     );
   }
 }

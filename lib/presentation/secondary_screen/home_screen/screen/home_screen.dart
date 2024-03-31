@@ -1,6 +1,9 @@
 import 'package:flut_pay/core/color_const.dart';
 import 'package:flut_pay/core/image_constants.dart';
 import 'package:flut_pay/core/text_const.dart';
+import 'package:flut_pay/presentation/secondary_screen/budget_screen/screen/budget_screen.dart';
+import 'package:flut_pay/presentation/secondary_screen/my_account_screen.dart/screen/myaccount_screen.dart';
+import 'package:flut_pay/presentation/secondary_screen/platinum_card_screen/screen/platinum_card_screen.dart';
 import 'package:flut_pay/presentation/secondary_screen/widgets/custom_button.dart';
 import 'package:flut_pay/presentation/secondary_screen/widgets/custom_container.dart';
 import 'package:flut_pay/presentation/secondary_screen/widgets/custom_sizedbox.dart';
@@ -56,7 +59,9 @@ class HomeScreen extends StatelessWidget {
                                 CustomCircleContainer(
                                   containerColor: Colors.red,
                                 ),
-                                CustomSizedBoxWidth(sWidth: 10,),
+                                CustomSizedBoxWidth(
+                                  sWidth: 10,
+                                ),
                                 Column(
                                   children: [
                                     CustomNormalText(
@@ -72,7 +77,9 @@ class HomeScreen extends StatelessWidget {
                                 CustomCircleContainer(
                                   containerColor: Colors.deepPurple,
                                 ),
-                                CustomSizedBoxWidth(sWidth: 10,),
+                                CustomSizedBoxWidth(
+                                  sWidth: 10,
+                                ),
                                 Column(
                                   children: [
                                     CustomNormalText(
@@ -116,11 +123,20 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          "https://e7.pngegg.com/pngimages/439/19/png-clipart-avatar-user-profile-icon-women-wear-frock-face-holidays.png",
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyAccountScreen()),
+                          );
+                        },
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            "https://e7.pngegg.com/pngimages/439/19/png-clipart-avatar-user-profile-icon-women-wear-frock-face-holidays.png",
+                          ),
+                          radius: 30.0,
                         ),
-                        radius: 30.0,
                       ),
                     ],
                   ),
@@ -146,28 +162,63 @@ class HomeScreen extends StatelessWidget {
                   crossAxisCount: 1,
                 ),
                 itemBuilder: ((context, index) {
-                  return Card(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(5),
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            gradient: containerGradColors[0],
-                            borderRadius: BorderRadius.circular(20.0),
+                  return InkWell(
+                    onTap: () {
+                      // Navigate to the corresponding page based on index
+                      switch (index) {
+                        case 0:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => MyAccountScreen()),
+                          );
+                          break;
+                        case 1:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PlatinumCardScreen()),
+                          );
+                          break;
+                        case 2:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BudgetScreen()),
+                          );
+                          break;
+                        default:
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomeScreen()),
+                          );
+                          break;
+                      }
+                    },
+                    child: Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.all(5),
+                            height: 50,
+                            width: 50,
+                            decoration: BoxDecoration(
+                              gradient: containerGradColors[0],
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Image.asset(
+                              activityIcons[index],
+                              color: Colors.white,
+                              fit: BoxFit.scaleDown,
+                            ),
                           ),
-                          child: Image.asset(
-                            activityIcons[index],
-                            color: Colors.white,
-                            fit: BoxFit.scaleDown,
+                          CustomNormalText(
+                            normalText: activityText[index],
                           ),
-                        ),
-                        CustomNormalText(
-                          normalText: activityText[index],
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 }),

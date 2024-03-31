@@ -17,10 +17,10 @@ class MyAccountScreen extends StatelessWidget {
       appBar: AppBar(
         title: CustomTitle(text: "My Account"),
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.deepPurple,
-        ),
+        // leading: Icon(
+        //   Icons.arrow_back_ios,
+        //   color: Colors.deepPurple,
+        // ),
       ),
       body: SingleChildScrollView(
         child: Column(
