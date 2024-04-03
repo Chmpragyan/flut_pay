@@ -143,7 +143,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            CustomSizedBoxHeight(),
+            // CustomSizedBoxHeight(),
             Padding(
               padding: const EdgeInsets.only(left: 25.0),
               child: CustomTitle(
@@ -236,6 +236,7 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.only(
                 left: 10,
                 right: 10,
+                top: 10,
               ),
               margin: EdgeInsets.only(left: 25.0, right: 20.0),
               // height: MediaQuery.sizeOf(context).height * 0.45,
@@ -312,7 +313,7 @@ class HomeScreen extends StatelessWidget {
               //   right: 10,
               // ),
               margin: EdgeInsets.only(left: 25.0, right: 20.0),
-              height: MediaQuery.sizeOf(context).height * 0.5,
+              height: MediaQuery.sizeOf(context).height * 0.45,
               // height: double.infinity,
               width: double.maxFinite,
               decoration: BoxDecoration(

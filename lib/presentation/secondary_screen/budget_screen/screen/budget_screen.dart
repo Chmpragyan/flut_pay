@@ -1,6 +1,6 @@
 import 'package:flut_pay/core/color_const.dart';
 import 'package:flut_pay/presentation/secondary_screen/budget_screen/component/custom_budget_card.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flut_pay/presentation/secondary_screen/widgets/custom_sizedbox.dart';
 import 'package:flutter/material.dart';
 
 class BudgetScreen extends StatelessWidget {
@@ -26,7 +26,8 @@ class BudgetScreen extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: double.maxFinite,
+              height: MediaQuery.of(context).size.height,
+              // height: double.maxFinite,
               width: double.maxFinite,
             ),
             Container(
@@ -53,11 +54,11 @@ class BudgetScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: MediaQuery.of(context).size.height / 2 - 170,
+              top: MediaQuery.of(context).size.height / 2 - 220,
               // left: MediaQuery.of(context).size.width / 2 - 160,
               child: Container(
                 // margin: EdgeInsets.only(left: 20, right: 20),
-                height: MediaQuery.of(context).size.height,
+                height: MediaQuery.of(context).size.height * 0.9,
                 width: MediaQuery.of(context).size.width,
                 // color: Colors.red,
                 child: Column(
@@ -83,6 +84,7 @@ class BudgetScreen extends StatelessWidget {
                       priceOnIndicator: 167,
                       trailingText: "\$50/Day",
                     ),
+                    CustomSizedBoxHeight(),
                   ],
                 ),
               ),

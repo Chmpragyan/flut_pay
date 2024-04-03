@@ -71,6 +71,7 @@ class MyAccountScreen extends StatelessWidget {
               imagePath: 'assets/images/visa.png',
               logoColor: Color.fromARGB(255, 20, 36, 159),
             ),
+            CustomSizedBoxHeight(),
           ],
         ),
       ),
